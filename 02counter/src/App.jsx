@@ -9,7 +9,7 @@ function App() {
   
   // const [count, setCount] = useState(0)
 
-  let [counter, setcounter] = useState(15)  // basically it takes two values as array, (a)  The current state.  (b) A function that updates the state.
+  let [counter, setcounter] = useState(15)  // basically it takes two values as array, (a)  The current state.  (b) A function that updates the state.,,,, the 15 is initial value
   // let counter = 15
 
 
@@ -29,7 +29,7 @@ function App() {
 
 const addvalue = ()=>{
   if(counter >= 20){
-    console.log("the counter value should be no greater than 20")
+    console.log("the counter value should not be greater than 20")
   }
   else{
     setcounter(counter + 1)
@@ -38,7 +38,7 @@ const addvalue = ()=>{
 
 const removeValue = ()=>{
   if(counter <= 0){
-    console.log("the counter value should be no lesser than 0")
+    console.log("the counter value should not be lesser than 0")
   }
   else{
     setcounter(counter -1)
