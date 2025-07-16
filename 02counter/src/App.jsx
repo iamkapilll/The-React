@@ -5,6 +5,8 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  
   // const [count, setCount] = useState(0)
 
   let [counter, setcounter] = useState(15)  // basically it takes two values as array, (a)  The current state.  (b) A function that updates the state.
