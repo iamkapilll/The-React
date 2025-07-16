@@ -53,6 +53,6 @@ createRoot(document.getElementById('root')).render(
     // <App />
     // <MyApp />
     // anotherElement
-    reactElement
+    reactElement  // in this way we can render object methods
   
 )
