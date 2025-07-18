@@ -52,7 +52,7 @@ function App() {
 // youtube:assignment addvalue should be no greater than 20 and removevalue should be no smaller than 0
 
 const addValue = ()=>{
-  if(counter >= 20){
+  if(counter >= 20){ // this actually doesnot let the value of counter go greater than 20
     console.log("the counter value should not be greater than 20")
   }
   else{
@@ -61,7 +61,7 @@ const addValue = ()=>{
 }
 
 const removeValue = ()=>{
-  if(counter <= 0){
+  if(counter <= 0){   // this actually doesnot let the value of counter go less  than 0
     console.log("the counter value should not be lesser than 0")
   }
   else{
