@@ -6,10 +6,12 @@ function App() {
   const [length, setLength] = useState(8)
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false)
-  const [password, setPassword] = useState("")
+  const [password, setPassword] = useState("")   //Stores the final password that will be generated and shown.
 
   //useRef hook
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null)   //Points to the <input> field (used for copying password).   Helps us select text programmatically.
+
+
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
@@ -37,8 +39,10 @@ function App() {
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
+
+
   return (
-    
+    <>
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className='text-white text-center my-3'>Password generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
@@ -92,8 +96,19 @@ function App() {
       </div>
     </div>
 </div>
+</>
     
   )
 }
 
 export default App
+
+
+// useState → to store and manage data (like password, checkbox states, length)
+
+// useCallback → to optimize functions (only recreate them when needed). In other words, useCallback caches a function between re-renders until its dependencies change.
+
+// useEffect → to run code when certain things change (like auto-generate password)
+
+// useRef → to reference DOM elements (like <input> field for copying)
+
