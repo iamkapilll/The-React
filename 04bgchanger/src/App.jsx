@@ -5,12 +5,12 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen duration-200" style={{ backgroundColor: color }}>
+      <div className="w-full h-screen duration-200" style={{ backgroundColor: color }}> // this div is taking the whole body of the screen
         {/* You can add buttons or other UI here to change the color */}
 
-        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
+        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'> // this div is a fixed at bottom taking a block  because it is a div so block element
 
-          <div className='flex flex-wrap justify-center gap-3 shadow=lg bg-white px-3 py-2 rounded-3xl'>
+          <div className='flex flex-wrap justify-center gap-3 shadow=lg bg-white px-3 py-2 rounded-3xl'> // this div is actually a flexed so the buttons inside are flexed
 
             <button onClick={()=> setColor("red")} 
             className='outline-none px-4 rounded-full text-white shadow-2xl' 
