@@ -2,7 +2,7 @@ import { ThemeProvider } from './contexts/theme'
 import './App.css'
 import { useEffect, useState } from 'react'
 import ThemeBtn from './components/ThemeBtn'
-
+import Card from './components/Card'
 function App() {
 
   const [themeMode, setThemeMode] = useState("light") 
