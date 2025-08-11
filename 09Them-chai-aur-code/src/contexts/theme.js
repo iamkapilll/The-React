@@ -1,4 +1,4 @@
-import {createContext, usecontext} from "react"
+import {createContext, useContext} from "react"
 
 export const ThemeContext = createContext({
     themeMode: "light",
@@ -9,7 +9,7 @@ export const ThemeContext = createContext({
 export const ThemeProvider = ThemeContext.Provider
 
 export default function useTheme(){
-    return usecontext(ThemeContext)
+    return useContext(ThemeContext)
 }
 
 //ThemeContext will be used to provide theme related data and functions
