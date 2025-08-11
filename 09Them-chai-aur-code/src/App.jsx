@@ -1,6 +1,6 @@
 import { ThemeProvider } from './contexts/theme'
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
 
@@ -13,6 +13,14 @@ function App() {
   const darkTheme = () =>{
     setThemeMode("dark")
   }
+
+  //actual change in theme
+
+  useEffect(() =>{
+    document.querySelector('html').classList.remove("light", "dark") //this will remove the default value for light, dark for html which was actually original value
+
+    document.querySelector("html").classList.add(themeMode) // this will add themeMode as setThemeMode as light and dark
+  }, [themeMode])
 
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
