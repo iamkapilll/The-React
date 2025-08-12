@@ -1,13 +1,17 @@
 import { createContext, useContext } from "react";
 
 export const TodoContext = createContext({
-    todos: [
+    todos: [ // properties defined
         {
             id: 1,
             todo: "todo message",
             completed: false
         }
-    ]
+    ],
+    addTodo: (todo) => {}, // methods declared for later used in App.jsx
+    updateTodo: (id, todo) => {},
+    deleteTodo: (id) => {},
+    toggleComplete: (id) => {}
 }) // creation of context
 
 export const TodoProvider = TodoContext.Provider
