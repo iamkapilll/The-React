@@ -14,9 +14,9 @@ export const TodoContext = createContext({
     toggleComplete: (id) => {}
 }) // creation of context
 
-export const TodoProvider = TodoContext.Provider
+export const TodoProvider = TodoContext.Provider // exporting provider for wrapping thing in App.jsx
 
-export const useTodo = () =>{ // this is a  custom hook
+export const useTodo = () =>{ // this is a  custom hook will be use to access datas of TodoContext
     return useContext(TodoContext)
 }
 
