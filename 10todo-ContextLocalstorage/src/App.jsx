@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-     <div>hello world from kapil dev chaudhary</div>
+     <div className='bg-gray-800 text-white p-4 rounded-lg'>hello world from kapil dev chaudhary</div>
     </>
   )
 }
