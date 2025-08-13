@@ -20,6 +20,11 @@ function App() {
     setTodos((prev) => prev.filter((todo) => todo.id !== id)) // here we take all the old value as prev and we filtered it with taking todo (individual value) so todo.id should not be equall to the id we have in the parameter.. so it will filter and make an new array without that id
   }
 
+  const toggleComplete = (id) =>{
+    setTodos((prev) => prev.map((prevTodo) => prevTodo.id ===   
+  id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo)) 
+  }
+
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
      <div className="bg-[#172842] min-h-screen py-8">
@@ -38,3 +43,6 @@ function App() {
 }
 
 export default App
+
+// here we take prev(all old values) and map it as prevTodo (old individual value) and did checked prevTodo.id(old individual value id) with the provided id through the parameter
+// here if the id is true(matched) then returing it as [all prevTodo(old individual value) and making completed value from true to false (inverting "completed" value)] and and if id not matched prevTodo jasta ko testai rakhdine with its jasta ko testai  completed value
