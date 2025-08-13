@@ -29,7 +29,12 @@ function App() {
 
   useEffect(() =>{
    const todos = JSON.parse(localStorage.getItem("todos") ) // here localstorage returns in string
-  })
+   
+   if(todos && todos.length > 0){
+    setTodos(todos)
+   }
+  }, [])
+  
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
