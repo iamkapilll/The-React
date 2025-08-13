@@ -11,6 +11,10 @@ function App() {
     setTodos((prev) => [{id: Date.now(), ...todo},...prev]) //prev means old todo. new todo with id and todo to be added in the array with prev todo that is already in the array
   }
 
+  const updateTodo = (id, todo) =>{
+    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id)))
+  }
+
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
      <div className="bg-[#172842] min-h-screen py-8">
