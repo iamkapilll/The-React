@@ -20,4 +20,4 @@ export const useTodo = () =>{ // this is a  custom hook will be use to access da
     return useContext(TodoContext)
 }
 
-// whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"
+// whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"   
