@@ -43,7 +43,6 @@ function App() {
                         {/*Loop and Add TodoItem here */}
                     </div>
                 </div>
-            </div>
    </TodoProvider>
   )
 }
