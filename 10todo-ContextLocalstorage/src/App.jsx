@@ -5,7 +5,7 @@ import { TodoProvider } from './contexts'
 
 function App() {
 
-  const [todos. setTodos] = useState([])
+  const [todos. setTodos] = useState([])  // todos is an array
 
   const addTodo = (todo) =>{
     setTodos((prev) => [{id: Date.now(), ...todo},...prev]) //prev means old todo. new todo with id and todo to be added in the array with prev todo that is already in the array
@@ -30,11 +30,11 @@ function App() {
   useEffect(() =>{
    const todos = JSON.parse(localStorage.getItem("todos") ) // here localstorage returns in string
    
-   if(todos && todos.length > 0){
+   if(todos && todos.length > 0){  // if there are todos or todos lenght > 0 (means todos is an array so length)
     setTodos(todos)
    }
   }, [])
-  
+
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
