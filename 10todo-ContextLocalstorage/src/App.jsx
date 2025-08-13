@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { TodoProvider } from './contexts'
 
@@ -26,6 +26,10 @@ function App() {
     setTodos((prev) => prev.map((prevTodo) => prevTodo.id ===   // here we take prev(all old values) and map it as prevTodo (old individual value) and did checked prevTodo.id(old individual value id) with the provided id through the parameter
   id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo)) // here if the id is true(matched) then returing it as [all prevTodo(old individual value) and making completed value from true to false (inverting "completed" value)] and and if id not matched prevTodo jasta ko testai rakhdine with its jasta ko testai  completed value
   }
+
+  useEffect(() =>{
+    
+  })
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
