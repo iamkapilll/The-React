@@ -12,8 +12,9 @@ function App() {
   }
 
   const updateTodo = (id, todo) =>{
-    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id))) //here we are mapping through the previous todos (individual todos) and checking if the id matches, then we return the updated todo
-  }
+    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id //here we are mapping through the previous todos (individual todos) and checking if the id matches, then we return the updated todo
+      === id ? todo : prevTodo))) // so if it returns true i.e id is matched then return the todo that is given throuh parameter (id, todo) otherwise return the prevTodo (since prevTodo is known as individual todo in the old todos list and prevTodo.id is the individual todo's id in the list )
+    }
 
   return (
     <TodoProvider value={{todos, addTodo, updateTodo, deleteTodo, toggleComplete}}>
