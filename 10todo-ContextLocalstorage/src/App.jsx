@@ -17,7 +17,7 @@ function App() {
   }
 
   const deleteTodo = (id) =>{
-    setTodos((prev) => prev.filter((todo) => todo.id !== id)) 
+    setTodos((prev) => prev.filter((todo) => todo.id !== id)) // here we take all the old value as prev and we filtered it with taking todo (individual value) so todo.id should not be equall to the id we have in the parameter.. so it will filter and make an new array without that id
   }
 
   return (
