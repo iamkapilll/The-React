@@ -36,7 +36,7 @@ function App() {
   }, [])
 
   useEffect(() =>{
-    localStorage.setItem("todos", JSON.stringify(todos))
+    localStorage.setItem("todos", JSON.stringify(todos)) // json.stringify will make it as string. setItem first part is key and last part is value localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
 
 
