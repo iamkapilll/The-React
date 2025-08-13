@@ -28,7 +28,7 @@ function App() {
   }
 
   useEffect(() =>{
-    
+    localStorage.getItem("todos") 
   })
 
   return (
