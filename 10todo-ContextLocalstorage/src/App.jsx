@@ -28,7 +28,7 @@ function App() {
   }
 
   useEffect(() =>{
-   const todos = JSON.parse(localStorage.getItem("todos") )
+   const todos = JSON.parse(localStorage.getItem("todos") ) // here localstorage returns in string
   })
 
   return (
