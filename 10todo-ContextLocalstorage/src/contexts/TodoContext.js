@@ -8,10 +8,11 @@ export const TodoContext = createContext({
             completed: false
         }
     ],
-    addTodo: (todo) => {}, // methods declared for later used in App.jsx
-    updateTodo: (id, todo) => {},
-    deleteTodo: (id) => {},
-    toggleComplete: (id) => {}
+     // methods declared for later used in App.jsx
+    addTodo: (todo) => {},   //this needs text
+    updateTodo: (id, todo) => {},   // this needs id and text
+    deleteTodo: (id) => {},  // this needs id
+    toggleComplete: (id) => {}  // this needs id
 }) // creation of context
 
 export const TodoProvider = TodoContext.Provider // exporting provider for wrapping thing in App.jsx
@@ -20,4 +21,4 @@ export const useTodo = () =>{ // this is a  custom hook will be use to access da
     return useContext(TodoContext)
 }
 
-// whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"   
+// whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"       
