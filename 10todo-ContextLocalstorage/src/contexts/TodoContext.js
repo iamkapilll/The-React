@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 
+// Creating the context with some default shape (data + methods)
 export const TodoContext = createContext({
     todos: [ // properties defined
         {
