@@ -13,6 +13,7 @@ function TodoForm() {
 
         if(!todo) return
 
+        // ⬅ Calling the addTodo function that was passed from App.jsx
         addTodo({todo, completed: false})
         setTodo("")
 
