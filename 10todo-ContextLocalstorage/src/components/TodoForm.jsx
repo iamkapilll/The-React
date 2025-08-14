@@ -5,6 +5,7 @@ function TodoForm() {
 
     const [todo, setTodo] = useState("")  // this todo for individual todo
 
+      // ⬅ Getting addTodo from context
     const {addTodo} = useTodo()
     
     const add = (e) => {
