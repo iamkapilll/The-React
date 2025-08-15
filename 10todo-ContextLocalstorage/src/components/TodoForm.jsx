@@ -6,7 +6,7 @@ function TodoForm() {
     const [todo, setTodo] = useState("")  // this todo for individual todo
 
       // ⬅ Getting addTodo from context
-    const {addTodo} = useTodo()
+    const {addTodo} = useTodo()  //addtodo vanne functionality chai yo todoForm ma use garna parcha because yo component is responsible for adding todos and tyo chai TodoContext ma xa so tyaha bata lyaune ani yeta functionality use garne
     
     const add = (e) => {
         e.preventDefault()
