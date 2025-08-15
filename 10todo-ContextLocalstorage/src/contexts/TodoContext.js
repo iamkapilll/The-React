@@ -24,6 +24,22 @@ export const useTodo = () =>{ // this is a  custom hook will be use to access da
 
 // whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"       
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // What’s happening here?
 
 // createContext() creates a shared data space (like a central warehouse).
