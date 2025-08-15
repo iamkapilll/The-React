@@ -59,8 +59,9 @@ function App() {
 export default App
 
 
-
+//see this notes for better understanding
 // AI Overview and important topic for local storage
+
 // localStorage in React allows for the persistence of data directly within the user's web browser, surviving page refreshes and even browser restarts. This is achieved by storing data as key-value pairs.
 // Key Concepts and Usage:
 // localStorage API:
