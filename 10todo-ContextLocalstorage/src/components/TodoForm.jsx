@@ -6,6 +6,7 @@ function TodoForm() {
     const [todo, setTodo] = useState("")  // this todo for individual todo
 
       // ⬅ Getting addTodo from context
+      //hamlai jun functionality chaiyo tyo TodoContext bata extract garne ani yeta use garne
     const {addTodo} = useTodo()  //addtodo vanne functionality chai yo todoForm ma use garna parcha because yo component is responsible for adding todos and tyo chai TodoContext ma xa so tyaha bata lyaune ani yeta functionality use garne
     
     const add = (e) => {
