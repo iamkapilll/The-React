@@ -84,3 +84,94 @@ export default App
 // Security: localStorage is not secure for sensitive data as it can be accessed by client-side scripts.
 // Storage Limits: localStorage has a storage limit, typically around 5MB.
 // Synchronicity: localStorage operations are synchronous, meaning they can block the main thread if large amounts of data are being processed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//gpt code for better understanding:
+// import { useEffect, useState } from 'react';
+// import './App.css';
+// import { TodoProvider } from './contexts';
+// import TodoForm from './components/TodoForm';
+
+// function App() {
+//     // Main global todos state (array of todo objects)
+//     const [todos, setTodos] = useState([]);
+
+//     // Function to add a new todo
+//     const addTodo = (todo) => {
+//         setTodos((prev) => [
+//             { id: Date.now(), ...todo }, // add unique id and spread todo object
+//             ...prev                      // keep old todos
+//         ]);
+//     };
+
+//     // Function to update an existing todo
+//     const updateTodo = (id, updatedTodo) => {
+//         setTodos((prev) =>
+//             prev.map((prevTodo) =>
+//                 prevTodo.id === id ? updatedTodo : prevTodo
+//             )
+//         );
+//     };
+
+//     // Function to delete a todo
+//     const deleteTodo = (id) => {
+//         setTodos((prev) => prev.filter((todo) => todo.id !== id));
+//     };
+
+//     // Function to toggle a todo's completion status
+//     const toggleComplete = (id) => {
+//         setTodos((prev) =>
+//             prev.map((prevTodo) =>
+//                 prevTodo.id === id
+//                     ? { ...prevTodo, completed: !prevTodo.completed }
+//                     : prevTodo
+//             )
+//         );
+//     };
+
+//     // Load todos from localStorage on first render
+//     useEffect(() => {
+//         const storedTodos = JSON.parse(localStorage.getItem("todos"));
+//         if (storedTodos && storedTodos.length > 0) {
+//             setTodos(storedTodos);
+//         }
+//     }, []);
+
+//     // Save todos to localStorage whenever todos state changes
+//     useEffect(() => {
+//         localStorage.setItem("todos", JSON.stringify(todos));
+//     }, [todos]);
+
+//     return (
+//         // Wrap everything with the provider so todos and functions are available everywhere
+//         <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
+//             <div className="bg-[#172842] min-h-screen py-8">
+//                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+//                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">
+//                         Manage Your Todos
+//                     </h1>
+//                     <div className="mb-4">
+//                         {/* Todo form component */}
+//                         <TodoForm />
+//                     </div>
+//                     <div className="flex flex-wrap gap-y-3">
+//                         {/* Here you'd loop and render each TodoItem */}
+//                     </div>
+//                 </div>
+//             </div>
+//         </TodoProvider>
+//     );
+// }
+
+// export default App;
