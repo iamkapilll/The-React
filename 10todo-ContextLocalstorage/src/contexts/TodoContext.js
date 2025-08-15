@@ -42,6 +42,8 @@ export const useTodo = () =>{ // this is a  custom hook will be use to access da
 
 
 
+
+
 //duplicated and chatgpt code:
 
 // We import createContext to make a context and useContext to use it in components
