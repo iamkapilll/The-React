@@ -1,6 +1,9 @@
 import React from 'react'
+import { useTodo } from '../contexts';
 
 function TodoItem({ todo }) {
+
+  const {updateTodo, deleteTodo, toggleCompleted} = useTodo //extracting whatever you want from TodoContext and make functionality here
     
 
     return (
