@@ -37,3 +37,26 @@ function TodoForm() {
 
 export default TodoForm;
 
+
+
+
+// What’s happening here?
+
+// This is the input + button for adding a todo.
+
+// useTodo() lets us access addTodo from context (which actually lives in App.jsx).
+
+// On form submit:
+
+// Prevent page reload (e.preventDefault()).
+
+// If input is empty → do nothing.
+
+// Otherwise, call addTodo() with the new todo object.
+
+// Clear the input (setTodo("")).
+
+
+
+
+
