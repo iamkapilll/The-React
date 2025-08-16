@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTodo } from '../contexts';
 
 function TodoItem({ todo }) {
 
-
+    const [isTodoEditable, setIsTodoEditable] = useState(false) 
+    
 
     const { updateTodo, deleteTodo, toggleCompleted } = useTodo //extracting whatever you want from TodoContext and make functionality here
 
