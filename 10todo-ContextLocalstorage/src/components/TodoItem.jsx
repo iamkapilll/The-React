@@ -3,8 +3,9 @@ import { useTodo } from '../contexts';
 
 function TodoItem({ todo }) {
 
-    const [isTodoEditable, setIsTodoEditable] = useState(false) 
-    
+    const [isTodoEditable, setIsTodoEditable] = useState(false) // pensil is for editable
+
+    const [todoMsg, setTodoMsg] = useState(todo.todo)
 
     const { updateTodo, deleteTodo, toggleCompleted } = useTodo //extracting whatever you want from TodoContext and make functionality here
 
