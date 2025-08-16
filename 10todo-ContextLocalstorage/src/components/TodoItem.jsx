@@ -12,7 +12,10 @@ function TodoItem({ todo }) {
         setIsTodoEditable(false) // update vaisakepaxi kei pani na lekhne banauna ko lagi
     }
 
-    
+    const toggleCompleted = () =>{
+        toggleComplete(todo.id) // just passing todo id for toggle false or true
+    }
+
 
     return (
         <div
