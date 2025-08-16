@@ -1,26 +1,24 @@
 import { createContext, useContext } from "react";
 
-// Creating the context with some default shape (data + methods)
+// Context created with default shape (sample data + empty functions)
 export const TodoContext = createContext({
-    todos: [ // properties defined
-        {
-            id: 1,
-            todo: "todo message",
-            completed: false
-        }
-    ],
-     // methods declared for later used in App.jsx
-    addTodo: (todo) => {},   //this needs text
-    updateTodo: (id, todo) => {},   // this needs id and text
-    deleteTodo: (id) => {},  // this needs id
-    toggleComplete: (id) => {}  // this needs id
-}) // creation of context
+  todos: [
+    { id: 1, todo: "todo message", completed: false }
+  ],
+  addTodo: (todo) => {},
+  updateTodo: (id, todo) => {},
+  deleteTodo: (id) => {},
+  toggleComplete: (id) => {}
+})
 
-export const TodoProvider = TodoContext.Provider // exporting provider for wrapping thing in App.jsx
+// Provider component → used in App.jsx
+export const TodoProvider = TodoContext.Provider
 
-export const useTodo = () =>{ // this is a  custom hook will be use to access datas of TodoContext
-    return useContext(TodoContext)
+// Custom hook to easily access context
+export const useTodo = () => {
+  return useContext(TodoContext)
 }
+
 
 // whenever we do "useContext" wherever in the file we need to provide the name of the context that we have created "TodoContext"       
 
