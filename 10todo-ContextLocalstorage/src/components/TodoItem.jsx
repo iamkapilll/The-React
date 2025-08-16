@@ -4,11 +4,13 @@ import { useTodo } from '../contexts';
 function TodoItem({ todo }) {
 
     const [isTodoEditable, setIsTodoEditable] = useState(false) // pensil is for editable
-
     const [todoMsg, setTodoMsg] = useState(todo.todo)
-
     const { updateTodo, deleteTodo, toggleCompleted } = useTodo() //extracting whatever you want from TodoContext and make functionality here
 
+    const editTodo = () =>{
+        updateTodo(todo.id, {...todo, todo: todoMsg}) // update ma todo ko (id) ra previous (todo) value k xa tyo chai {...todo} vanerea pathaxa and update chai todoMsg le gariraxa 
+        setIsTodoEditable(false) // update vaisakepaxi kei pani na lekhne banauna ko lagi
+    }
 
     return (
         <div
