@@ -7,7 +7,7 @@ function TodoItem({ todo }) {
 
     const [todoMsg, setTodoMsg] = useState(todo.todo)
 
-    const { updateTodo, deleteTodo, toggleCompleted } = useTodo //extracting whatever you want from TodoContext and make functionality here
+    const { updateTodo, deleteTodo, toggleCompleted } = useTodo() //extracting whatever you want from TodoContext and make functionality here
 
 
     return (
