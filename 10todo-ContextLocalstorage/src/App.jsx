@@ -39,7 +39,7 @@ function App() {
   }
 
   // Load todos from localStorage when app starts
-  useEffect(() => {
+  useEffect(() => {  // First useEffect runs once when app loads → it fetches saved notes from localStorage.
     const todos = JSON.parse(localStorage.getItem("todos"))
     if (todos && todos.length > 0) {
       setTodos(todos)
@@ -47,7 +47,7 @@ function App() {
   }, [])
 
   // Save todos to localStorage whenever todos change
-  useEffect(() => {
+  useEffect(() => {   // Second useEffect runs every time notes change → updates localStorage.
     localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
 
