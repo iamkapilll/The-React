@@ -32,6 +32,7 @@ export const todoSlice = createSlice({
 
 export const { addTodo, removeTodo, updateTodo } = todoSlice.actions;  //individua functionality export which will be in action in future for components
 
+export default todoSlice.reducer; // exporting all lists of reducers for no restrictions
 
 //state and actions are like compulsory included on those rediucers methods
 // state: it is like can be a value for something which can be changed and updated,
