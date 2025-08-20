@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-    todos: [{id: 1, text: 'hello world'}]
+    todos: [{ id: 1, text: 'hello world' }]
 }
 
 export const todoSlice = createSlice({
@@ -16,11 +16,18 @@ export const todoSlice = createSlice({
             state.todos.push(todo)  //updating the state`
         },
         removeTodo: (state, action) => {
-            state.todos = state.todos.filter((todo) => 
-                todo.id !== action.payload)  // payload can be id or somethng else 
+            state.todos = state.todos.filter((todo) =>
+                todo.id !== action.payload)  // payload can be id or somethng else  
+        },
+        updateTodo: (state, action) => {
+            const { id, text } = action.payload; // payload contains both id and new text
+            const todo = state.todos.find((todo) => todo.id === id);
+            if (todo) {
+                todo.text = text; // mutate safely (thanks to immer under the hood)
+            }
         },
     }
-}) 
+})
 
 //state and actions are like compulsory included on those rediucers methods
 // state: it is like can be a value for something which can be changed and updated,
