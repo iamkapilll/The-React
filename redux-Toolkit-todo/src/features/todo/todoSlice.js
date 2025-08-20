@@ -13,6 +13,7 @@ export const todoSlice = createSlice({
                 id: nanoid(),
                 text: action.payload     //payload is an object it self so it can generate text
             }
+            state.todos.push(todo)  //updating the state`
         },
         removeTodo: () => {},
     }
