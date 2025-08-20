@@ -8,7 +8,9 @@ export const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {   //reducer takes properties and functions
-        addTodo: () => {},
+        addTodo: (state, action) => {},
         removeTodo: () => {},
     }
 }) 
+
+//state and actions are like compulsory included on those rediucers methods
