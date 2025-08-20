@@ -30,7 +30,7 @@ export const todoSlice = createSlice({
 })
 
 
-export const { addTodo, removeTodo, updateTodo } = todoSlice.actions;  //individua functionality export which will be in action in future for components
+export const { addTodo, removeTodo, updateTodo } = todoSlice.actions;  //individual reducer method() or functionality export which will be in action in future for react components
 
 export default todoSlice.reducer; // exporting all lists of reducers for no restrictions
 
