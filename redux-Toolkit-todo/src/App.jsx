@@ -8,10 +8,9 @@ function App() {
 
   return (
     <>
-     <div>Learning Redux Toolkit</div>
+     <h1>Learning Redux Toolkit</h1>
     </>
   )
 }
 
 export default App
-``
