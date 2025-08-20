@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {removeTodo} from '../features/todo/todoSlice'
 
 function Todos() {
-    const todos = useSelector(state => state.todos)
+    const todos = useSelector(state => state.todos)  //// useSelector for accessing or selectiong initial state from todoSlice.js
     const dispatch = useDispatch()
 
   return (
