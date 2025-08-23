@@ -49,6 +49,7 @@ export class AuthService {
         return null; // this is because if there is nothing to return for (return await this.account.get()), we return null
     }
 
+    // Logout account  (deleteSession and deleteSessions => read docs from appwrite  --- )
     async logout(){
         try {
             return await this.account.deleteSessions();
