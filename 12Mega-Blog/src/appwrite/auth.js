@@ -1,5 +1,4 @@
-// src/appwrite/auth.js
-import conf from '../conf.js'
+import conf from '../conf.js';
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
@@ -8,36 +7,37 @@ export class AuthService {
 
     constructor() {
         this.client
-            .setEndpoint(conf.appwriteUrl)       // API endpoint (e.g., https://cloud.appwrite.io/v1)
-            .setProject(conf.appwriteProjectId); // Project ID
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
 
-    // ✅ Create new account
+    // Create new account and auto-login
     async createAccount({ email, password, name }) {
         try {
-            const userAccount = await this.account.create(
-                ID.unique(),
-                email,
-                password,
-                name
-            );
-            if(userAccount){
-                // return userAccount; call another function like account created then go for login
-            }else{
-                return userAccount
+            const userAccount = await this.account.create(ID.unique(), email, password, name);
+
+            if (userAccount) {
+                // auto-login after account creation
+                return this.login({ email, password });
+            } else {
+                return userAccount; // fallback
             }
-            
         } catch (error) {
-            throw error;
-            // so the red line error is due to the throw error; we can handle it in the calling function
+            throw error; // handled in the calling function
         }
     }
 
+    // Login
+    async login({ email, password }) {
+        try {
+            return await this.account.createEmailSession(email, password);
+        } catch (error) {
+            throw error;
+        }
+    }
 }
 
-// Create a single instance to use across app
+// Single instance
 const authService = new AuthService();
-
 export default authService;
-
