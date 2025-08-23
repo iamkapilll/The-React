@@ -68,7 +68,7 @@ export class Service{
     //searching for single post
     async getPost(slug){  //slug as id
         try {
-            return await this.databases.getDocument( // appwrite docs =>
+            return await this.databases.getDocument( // appwrite docs => database-api-get document
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug
