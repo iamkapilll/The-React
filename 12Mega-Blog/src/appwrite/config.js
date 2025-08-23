@@ -14,7 +14,7 @@ export class Service{
             this.bucket = new Storage(this.client) //bucket = stroage // bucket is just a variable name for storage
     }
 
-    async createPost({title, slug, content, featuredImage, status, userId}){  // slug is used here as document id
+    async createPost({title, slug, content, featuredImage, status, userId}){  // slug is used here as document id   
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -30,6 +30,24 @@ export class Service{
             )
         } catch (error) {
             console.log("Appwrite service :: createPost :: errro", error)
+        }
+    }
+
+    async updatePost(slug, {title, content, featuredImage, status}){
+        try {
+            return await this.databases.updateDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug,
+                {
+                    title,
+                    content,
+                    featuredImage,
+                    status,
+                }
+            )
+        } catch (error) {
+            console.log("Appwrite service :: updatePost :: errro", error)
         }
     }
 }
