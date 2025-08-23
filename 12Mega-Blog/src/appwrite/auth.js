@@ -24,7 +24,8 @@ export class AuthService {
                 return userAccount; // fallback
             }
         } catch (error) {
-            throw error; // handled in the calling function
+            // throw error; // handled in the calling function
+            console.log("Appwrite service :: createAccount :: errro", error)
         }
     }
 
@@ -33,8 +34,19 @@ export class AuthService {
         try {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
-            throw error;
+            // throw error;
+            console.log("Appwrite service :: login :: errro", error)
         }
+    }
+
+    //if we have an already existing account to check
+    async getCurrentUser(){
+        try {
+            return await this.account.get()
+        } catch (error) {
+            console.log("Appwrite service :: getCurrentUser :: errro", error)
+        }
+        return null; // this is because if there is nothing to return for (return await this.account.get()), we return null
     }
 }
 
