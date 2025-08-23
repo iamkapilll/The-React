@@ -64,6 +64,20 @@ export class Service{
             return false
         }
     }
+
+    //searching for single post
+    async getPost(slug){  //slug as id
+        try {
+            return await this.databases.getDocument( // appwrite docs =>
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug
+            )
+        } catch (error) {
+            console.log("Appwrite service :: deletePost :: errro", error)
+            return false
+        }
+    }
 }
 
 
