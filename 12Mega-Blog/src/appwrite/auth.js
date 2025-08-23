@@ -62,3 +62,7 @@ export class AuthService {
 // Single instance
 const authService = new AuthService();
 export default authService;
+
+
+
+//Note: I can use this code in the future if i have to make (authentication requests) to the backend server
