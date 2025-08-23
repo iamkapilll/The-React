@@ -48,6 +48,14 @@ export class AuthService {
         }
         return null; // this is because if there is nothing to return for (return await this.account.get()), we return null
     }
+
+    async logout(){
+        try {
+            return await this.account.deleteSessions();
+        } catch (error) {
+            console.log("Appwrite service :: logout :: errro", error)
+        }
+    }
 }
 
 // Single instance
