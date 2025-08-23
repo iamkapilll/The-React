@@ -39,7 +39,7 @@ export class AuthService {
         }
     }
 
-    //if we have an already existing account to check
+    //if we have an already existing account to check  (get => read docs from appwrite)
     async getCurrentUser(){
         try {
             return await this.account.get()
