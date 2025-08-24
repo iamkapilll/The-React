@@ -93,7 +93,7 @@ export class Service{
         }
     }
 
-    //file upload sevice
+    // ##file upload sevice
 
     //uploading a file:
     async uploadFile(file){
@@ -121,6 +121,14 @@ export class Service{
             console.log("Appwrite service :: uploadFile :: errro", error)
             return false
         }
+    }
+
+    //Get a file preview 
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileId
+        )
     }
 }
 
