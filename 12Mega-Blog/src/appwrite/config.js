@@ -79,7 +79,7 @@ export class Service{
         }
     }
 
-    
+    //listing all posts with status == active
     async getPosts(querues = [Query.equal("status", "active")]){
         try {
             return await this.databases.listDocuments(
