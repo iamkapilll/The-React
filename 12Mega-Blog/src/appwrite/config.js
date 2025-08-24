@@ -74,7 +74,21 @@ export class Service{
                 slug
             )
         } catch (error) {
-            console.log("Appwrite service :: deletePost :: errro", error)
+            console.log("Appwrite service :: getPost :: errro", error)
+            return false
+        }
+    }
+
+    
+    async getPosts(querues = [Query.equal("status", "active")]){
+        try {
+            return await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                querues,
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPosts :: errro", error)
             return false
         }
     }
