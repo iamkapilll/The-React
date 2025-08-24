@@ -109,7 +109,7 @@ export class Service{
         }
     }
 
-    
+    //deleting a file:
     async deleteFile(fileId){  // this file id came from after uploading the file with ID.unique(), above
         try {
             await this.bucket.deleteFile(
