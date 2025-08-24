@@ -108,6 +108,20 @@ export class Service{
             return false
         }
     }
+
+    
+    async deleteFile(fileId){  // this file id came from after uploading the file with ID.unique(), above
+        try {
+            await this.bucket.deleteFile(
+                conf.appwriteBucketId,
+                fileId  
+            )
+            return true
+        } catch (error) {
+            console.log("Appwrite service :: uploadFile :: errro", error)
+            return false
+        }
+    }
 }
 
 
