@@ -92,6 +92,22 @@ export class Service{
             return false
         }
     }
+
+    //file upload sevice
+
+    
+    async uploadFile(file){
+        try {
+            return await this.bucket.createFile(
+                conf.appwriteBucketId,
+                ID.unique(),
+                file
+            )
+        } catch (error) {
+            console.log("Appwrite service :: uploadFile :: errro", error)
+            return false
+        }
+    }
 }
 
 
