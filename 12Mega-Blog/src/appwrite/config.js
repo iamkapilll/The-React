@@ -1,3 +1,4 @@
+//appwrite database, file upload, and custom queries
 import conf from '../conf.js';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
