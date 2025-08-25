@@ -13,7 +13,7 @@ const authSlice = createSlice({
             state.status = true;
             state.userData = action.payload.userData; //state.userData = action.payload// name same so no difference
         },
-        logout: (state) =>{ 
+        logout: (state) =>{  // actin can also happen but for logout not necessary
             state.status = false;
             state.userData = null;
         }
