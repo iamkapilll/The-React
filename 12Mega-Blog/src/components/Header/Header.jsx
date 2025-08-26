@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Header() {
 
+  //authStatus to see status true or false
   const authStatus = useSelector((state) => state.auth.status)  //see authSLice
 
   return (
