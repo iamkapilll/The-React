@@ -6,4 +6,4 @@ function Logo({width = '100px'}) { // width is a property
   ) 
 }
 
-export default Logo
+export default Logo // 
