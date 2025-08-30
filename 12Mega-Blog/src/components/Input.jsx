@@ -5,7 +5,7 @@ const Input = React.forwardRef( function Input({
     type = "text",
     className = "",
     ...props
-}, ref){
+}, ref){ //In React, forwardRef allows a parent component to pass a ref to a DOM element or component that is nested within a child component, enabling the parent to access and control the child's internal DOM.
     const id = useId()
     return (
         <div className='w-full'>
