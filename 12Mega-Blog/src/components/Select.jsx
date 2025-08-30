@@ -30,3 +30,10 @@ function Select({
 }
 
 export default Select
+
+
+            // {options?.map((option) =>{    // here in this conditon if we have used like:  {options.map((option)        without that ? then it would have crashed definitely if there is no any values in options to map so for that we did like if there is some values options then only do map, it avoids crash
+            //     <option key={option} value={option}>
+            //         {option}
+            //     </option>
+            // })}
