@@ -3,7 +3,7 @@ import React, {useId} from 'react'
 function Select({
     options,
     label,
-    className,
+    className, //className="" as said by chai aur code
     ...props
 }, ref) {
 
