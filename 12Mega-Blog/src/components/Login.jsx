@@ -21,6 +21,7 @@ function Login() {
             if(session){
                 const userData = await authService.getCurrentUser()
                 if(userData) dispatch(authLogin(userData))  //dispatch with reducer to send userData
+                 navigate("/")
             }
         } catch (error) {
             setError(error.message)
