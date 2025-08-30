@@ -1,3 +1,5 @@
+//step 8
+
 //Header
 import React from 'react'
 import { Container, Logo, LogoutBtn} from '../index'
@@ -8,9 +10,9 @@ import { useNavigate } from 'react-router-dom'
 function Header() {
 
   //authStatus to see status true or false
-  const authStatus = useSelector((state) => state.auth.status)  //see authSLice
+  const authStatus = useSelector((state) => state.auth.status)  //see authSLice // auth is the name of the slice in authSlice
 
-    const navigate = useNavigate()
+    const navigate = useNavigate()  
 
   const navItems = [
     {
