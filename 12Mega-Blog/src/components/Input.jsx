@@ -1,6 +1,6 @@
 import React, {useId} from 'react'
 
-const Input = React.forwardRef( function Input({
+const Input = React.forwardRef( function Input({  //one way to give reference ,, another way id defined in Select.jsx
     label,
     type = "text",
     className = "",
