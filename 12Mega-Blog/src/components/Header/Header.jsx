@@ -2,17 +2,14 @@
 
 //Header
 import React from 'react'
-import { Container, Logo, LogoutBtn} from '../index'
+import {Container, Logo, LogoutBtn} from '../index'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import {useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 function Header() {
-
-  //authStatus to see status true or false
-  const authStatus = useSelector((state) => state.auth.status)  //see authSLice // auth is the name of the slice in authSlice
-
-    const navigate = useNavigate()  
+  const authStatus = useSelector((state) => state.auth.status)
+  const navigate = useNavigate()
 
   const navItems = [
     {
@@ -23,12 +20,12 @@ function Header() {
     {
       name: "Login",
       slug: "/login",
-      active: !authStatus,  // if authstatus true then show login 
+      active: !authStatus,
   },
   {
       name: "Signup",
       slug: "/signup",
-      active: !authStatus, // if authstatus true then show signup
+      active: !authStatus,
   },
   {
       name: "All Posts",
@@ -41,7 +38,9 @@ function Header() {
       active: authStatus,
   },
   ]
- return (
+
+
+  return (
     <header className='py-3 shadow bg-gray-500'>
       <Container>
         <nav className='flex'>
