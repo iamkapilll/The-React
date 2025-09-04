@@ -1,7 +1,7 @@
 //step 3
 
 //appwrite database, file upload, and custom queries
-import conf from '../conf.js';
+import conf from '../conf/conf';
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 export class Service{

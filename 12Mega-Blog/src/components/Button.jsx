@@ -15,5 +15,4 @@ export default function Button({
         </button>
     );
 }
-
 //{children} is like a parameter or some content or text that is passed to the button..

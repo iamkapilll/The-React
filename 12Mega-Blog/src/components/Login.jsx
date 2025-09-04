@@ -8,29 +8,27 @@ import {useDispatch} from "react-redux"
 import authService from "../appwrite/auth"
 import {useForm} from "react-hook-form"
 
-
 function Login() {
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
     const [error, setError] = useState("")
 
-    const login = async(data) =>{
+    const login = async(data) => {
         setError("")
         try {
             const session = await authService.login(data)
-            if(session){
+            if (session) {
                 const userData = await authService.getCurrentUser()
-                if(userData) dispatch(authLogin(userData))  //dispatch with reducer to send userData
-                 navigate("/")
+                if(userData) dispatch(authLogin(userData));
+                navigate("/")
             }
         } catch (error) {
             setError(error.message)
         }
     }
 
- return (
+  return (
     <div
     className='flex items-center justify-center w-full'
     >

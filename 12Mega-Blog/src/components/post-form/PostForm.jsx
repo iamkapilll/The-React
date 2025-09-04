@@ -122,4 +122,4 @@ export default function PostForm({ post }) {
             </div>
         </form>
     );
-}``
+}   

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Logo({width = '100px'}) { // width is a property
+function Logo({width = '100px'}) {
   return (
     <div>Logo</div>
-  ) 
+  )
 }
 
-export default Logo // export the Logo
+export default Logo
