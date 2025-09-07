@@ -69,4 +69,4 @@ export default authService;
 
 //Note: I can reuse this code in the future if i have to make (authentication requests) to the backend server.
 // and and  i can also use this in other projects as well by adding other methods to the AuthService class..
-// will continue learning more about this in the future.
+// will continue learning more about this in the future.    
