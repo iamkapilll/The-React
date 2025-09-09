@@ -143,3 +143,4 @@ function Footer() {
 }
 
 export default Footer
+//exporting
